@@ -17,9 +17,11 @@ Usage
 In order to have the fading-out effect when touching your button you should follow these simple steps:
 
 1. Select your UIButton from the Interface Builder and change its class to be IKFadeButton instead of UIButton.
+
 <img src="https://raw.githubusercontent.com/inaka/IKFadeButton/master/Images/Screenshot1.png"/>
 
 2. Change the Highlighted settings for your button, the ones IKFadeButton is prepared to support are text color, image and background image. Those are the properties that are going to be faded out when transitioning back from a highlighted state to a normal state.
+
 <img src="https://raw.githubusercontent.com/inaka/IKFadeButton/master/Images/Screenshot2.png"/> 
 
 3. That's it! You can optionally change the duration of the fade-out animation by leveraging the ".fadeDuration" property of your IKFadeButton instance (default value is 0.5 seconds).
