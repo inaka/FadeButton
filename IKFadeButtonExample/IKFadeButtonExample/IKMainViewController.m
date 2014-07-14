@@ -74,7 +74,6 @@ typedef NS_ENUM(NSInteger, IKTag) {
 - (void)changeFadeDurationWithDelta:(CGFloat)duration tag:(IKTag)tag
 {
     CGFloat oldDuration, newDuration;
-    
     switch (tag)
     {
         case IKTagFirst:    oldDuration = self.firstDuration;   break;

@@ -10,6 +10,9 @@
 
 @interface IKFadeButton : UIButton
 
+/**
+ Fade animation duration of the button (in seconds). Default value is 0.5.
+ */
 @property (readwrite, nonatomic) CGFloat fadeDuration;
 
 @end
