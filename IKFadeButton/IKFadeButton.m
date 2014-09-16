@@ -25,10 +25,9 @@ CGFloat const IKFadeButtonDefaultDuration = .5;
 - (void)awakeFromNib
 {
     [super awakeFromNib];
-    
-    [self addOverlayBackgroundImage];
-    [self addOverlayImage];
-    [self addOverlayLabel];
+    [self configureOverlayBackgroundImage];
+    [self configureOverlayImage];
+    [self configureOverlayLabel];
 }
 
 #pragma mark - Accessors
@@ -58,6 +57,36 @@ CGFloat const IKFadeButtonDefaultDuration = .5;
     [self fadeOutOverlays];
 }
 
+- (void)setBackgroundImage:(UIImage *)image forState:(UIControlState)state
+{
+    [super setBackgroundImage:image forState:state];
+    
+    if (state == UIControlStateHighlighted)
+    {
+        [self configureOverlayBackgroundImage];
+    }
+}
+
+- (void)setImage:(UIImage *)image forState:(UIControlState)state
+{
+    [super setImage:image forState:state];
+    
+    if (state == UIControlStateHighlighted)
+    {
+        [self configureOverlayImage];
+    }
+}
+
+- (void)setTitle:(NSString *)title forState:(UIControlState)state
+{
+    [super setTitle:title forState:state];
+    
+    if (state == UIControlStateHighlighted)
+    {
+        [self configureOverlayLabel];
+    }
+}
+
 - (void)setHighlighted:(BOOL)highlighted
 {
     // Intentionally overriden to do nothing.
@@ -65,8 +94,9 @@ CGFloat const IKFadeButtonDefaultDuration = .5;
 
 #pragma mark - Private
 
-- (void)addOverlayBackgroundImage
+- (void)configureOverlayBackgroundImage
 {
+    [self.overlayBackground removeFromSuperview];
     self.overlayBackground = [[UIImageView alloc] initWithImage:[self backgroundImageForState:UIControlStateHighlighted]];
     CGRect frame = self.frame;
     frame.origin.x = 0;
@@ -76,16 +106,18 @@ CGFloat const IKFadeButtonDefaultDuration = .5;
     [self addSubview:self.overlayBackground];
 }
 
-- (void)addOverlayImage
+- (void)configureOverlayImage
 {
+    [self.overlayImage removeFromSuperview];
     self.overlayImage = [[UIImageView alloc] initWithImage:[self imageForState:UIControlStateHighlighted]];
     self.overlayImage.frame = self.imageView.frame;
     self.overlayImage.alpha = self.highlighted;
     [self addSubview:self.overlayImage];
 }
 
-- (void)addOverlayLabel
+- (void)configureOverlayLabel
 {
+    [self.overlayLabel removeFromSuperview];
     self.overlayLabel = [[UILabel alloc] init];
     self.overlayLabel.frame = self.titleLabel.frame;
     self.overlayLabel.alpha = self.highlighted;
