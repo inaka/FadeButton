@@ -25,9 +25,7 @@ CGFloat const IKFadeButtonDefaultDuration = .5;
 - (void)awakeFromNib
 {
     [super awakeFromNib];
-    [self configureOverlayBackgroundImage];
-    [self configureOverlayImage];
-    [self configureOverlayLabel];
+    [self configureOverlays];
 }
 
 #pragma mark - Accessors
@@ -92,7 +90,20 @@ CGFloat const IKFadeButtonDefaultDuration = .5;
     // Intentionally overriden to do nothing.
 }
 
+- (void)setFrame:(CGRect)frame
+{
+    [super setFrame:frame];
+    [self configureOverlays];
+}
+
 #pragma mark - Private
+
+- (void)configureOverlays
+{
+    [self configureOverlayBackgroundImage];
+    [self configureOverlayImage];
+    [self configureOverlayLabel];
+}
 
 - (void)configureOverlayBackgroundImage
 {
