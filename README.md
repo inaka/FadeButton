@@ -1,18 +1,19 @@
-
 FadeButton
 ============
-***Fading Buttons for iOS***
+***Fading effects for buttons in iOS made simple***
 
 [![Build Status](https://api.travis-ci.org/inaka/FadeButton.svg)](https://travis-ci.org/inaka/FadeButton) [![Codecov](https://codecov.io/gh/inaka/FadeButton/branch/master/graph/badge.svg)](https://codecov.io/gh/inaka/jayme) [![Swift](https://img.shields.io/badge/Swift-3.0-orange.svg?style=flat)](https://swift.org/) [![Cocoapods](https://img.shields.io/cocoapods/v/FadeButton.svg)](http://cocoadocs.org/docsets/Jayme) [![Twitter](https://img.shields.io/badge/twitter-@inaka-blue.svg?style=flat)](http://twitter.com/inaka)
 Overview
 --------
-This is just a UIButton subclass to get a fading-out effect after touching a button, done in the simplest way possible.
+This is just a customizable `UIButton` subclass that provides fading effects that display upon touch:
 
 ![Sample](https://raw.githubusercontent.com/inaka/FadeButton/master/Assets/V2/sample.gif)
 
+> The effects actually happen when the user releases the button.
 
 Usage
 -----
+
 **1)** Go to interface builder, select your button, open the Identity Inspector tab, and set its custom class to `FadeButton`.
 
 ![Sample](https://raw.githubusercontent.com/inaka/FadeButton/master/Assets/V2/screenshot1.png)
@@ -21,10 +22,9 @@ Usage
 
 ![Sample](https://raw.githubusercontent.com/inaka/FadeButton/master/Assets/V2/screenshot2.png)
 
-- `fadeDuration` for setting how long the fade effect lasts.
+- `fadeDuration` for setting how long the fading effect lasts.
 - Then, the properties `textColor`, `image` and `backgroundImage` (that can be different for each state config) will be affected by the fading effect when the transitions between `.normal` state and the `.highlighted` state (and vice versa) occur.
   - For instance, if you set `textColor: .white for: .normal` state and `textColor: .yellow for: .highlighted` state, the user will see a fading text effect from yellow to white after releasing the button.
-
 
 Sample Project
 -------
@@ -32,9 +32,9 @@ There's a sample project inside this repo that you can check out in order to hav
 
 ## Setup
 
-- FadeButton is available via [cocoapods](http://cocoapods.org/). In order to install it, add this line to your `Podfile`:
+- Via [cocoapods](http://cocoapods.org/), add this line to your `Podfile`:
   - `pod 'FadeButton' ~> '2.0'`
-  - Remember to add an `import FadeButton` statement in any source file of your project that needs to make use of the library.
+- Otherwise, you can just drag and drop the `FadeButton.swift` file into your project, and keep it up to date by yourself.
 
 ## Older Versions Support
 
