@@ -1,3 +1,4 @@
+
 FadeButton
 ============
 ***Fading Buttons for iOS***
@@ -7,21 +8,23 @@ Overview
 --------
 This is just a UIButton subclass to get a fading-out effect after touching a button, done in the simplest way possible.
 
-<img src="https://raw.githubusercontent.com/inaka/FadeButton/master/Images/FadeButton.gif"/>
+![Sample](https://raw.githubusercontent.com/inaka/FadeButton/master/Assets/V2/sample.gif)
+
 
 Usage
 -----
 **1)** Go to interface builder, select your button, open the Identity Inspector tab, and set its custom class to `FadeButton`.
 
-<img src="https://raw.githubusercontent.com/inaka/IKFadeButton/master/Assets/V2/screenshot1.png"/>
+![Sample](https://raw.githubusercontent.com/inaka/FadeButton/master/Assets/V2/screenshot1.png)
 
 **2)** Also, check out the following attributes in the Attributes Inspector tab:
 
-<img src="https://raw.githubusercontent.com/inaka/IKFadeButton/master/Assets/V2/screenshot2.png"/>
+![Sample](https://raw.githubusercontent.com/inaka/FadeButton/master/Assets/V2/screenshot2.png)
 
 - `fadeDuration` for setting how long the fade effect lasts.
 - Then, the properties `textColor`, `image` and `backgroundImage` (that can be different for each state config) will be affected by the fading effect when the transitions between `.normal` state and the `.highlighted` state (and vice versa) occur.
   - For instance, if you set `textColor: .white for: .normal` state and `textColor: .yellow for: .highlighted` state, the user will see a fading text effect from yellow to white after releasing the button.
+
 
 Sample Project
 -------
