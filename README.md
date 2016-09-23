@@ -18,7 +18,7 @@ Usage
 
 ![Sample](https://raw.githubusercontent.com/inaka/FadeButton/master/Assets/V2/screenshot1.png)
 
-**2)** Also, check out the following attributes in the Attributes Inspector tab:
+**2)** Check out the following attributes in the Attributes Inspector tab:
 
 ![Sample](https://raw.githubusercontent.com/inaka/FadeButton/master/Assets/V2/screenshot2.png)
 
