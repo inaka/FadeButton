@@ -26,4 +26,3 @@ Pod::Spec.new do |s|
   s.source       = { :git => "https://github.com/inaka/FadeButton.git", :tag => s.version }
   s.source_files  = "FadeButton/**/*.swift"
 end
-Contact GitHub API Training Shop Blog About
