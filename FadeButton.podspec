@@ -20,7 +20,7 @@ Pod::Spec.new do |s|
     limitations under the License.
     LICENSE
   }
-  s.author    = "Inaka"
+  s.authors    = { "Pablo Villar" => "https://twitter.com/volbap", "Inaka" => "http://inaka.net" }
   s.social_media_url   = "http://twitter.com/inaka"
   s.platform     = :ios, "8.0"
   s.source       = { :git => "https://github.com/inaka/FadeButton.git", :tag => s.version }
