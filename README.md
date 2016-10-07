@@ -1,8 +1,10 @@
+
 FadeButton
 ============
 ***Fading effects for buttons in iOS made simple***
 
 [![Build Status](https://api.travis-ci.org/inaka/FadeButton.svg)](https://travis-ci.org/inaka/FadeButton) [![Swift](https://img.shields.io/badge/Swift-3.0-orange.svg?style=flat)](https://swift.org/) [![Cocoapods](https://img.shields.io/cocoapods/v/FadeButton.svg)](https://cocoapods.org/pods/FadeButton) [![Twitter](https://img.shields.io/badge/twitter-@inaka-blue.svg?style=flat)](http://twitter.com/inaka)
+
 
 Overview
 --------
@@ -11,6 +13,7 @@ This is just a customizable `UIButton` subclass that provides fading effects tha
 ![Sample](https://raw.githubusercontent.com/inaka/FadeButton/master/Assets/V2/sample.gif)
 
 > Effects occur when the user releases the button.
+
 
 Usage
 -----
@@ -27,6 +30,7 @@ Usage
 - Then, the properties `textColor`, `image` and `backgroundImage` (that can have different values set for each state config) will be affected by the fading effect when the transitions between the `.highlighted` state and the `.normal` state occur.
   - For instance, if you set `textColor: .white for: .normal` state and `textColor: .yellow for: .highlighted` state, the user will see a fading text effect from yellow to white after releasing the button.
 
+
 Sample Project
 -------
 There's a sample project inside this repo that you can check out in order to have a deeper understanding of the usage of this library.
@@ -39,8 +43,8 @@ There's a sample project inside this repo that you can check out in order to hav
 
 ## Older Versions Support
 
-- As of its `2.0.0` release, this library works with [**Swift 3.0**](https://swift.org/blog/swift-3-0-released/)
-- If you look for older languages version support, you can check out the `1.0.0` release, that contains the old Objective-C version of the library, which is compatible with older Swift versions.
+- As of its [2.0.0](https://github.com/inaka/FadeButton/releases/tag/2.0.0) release, this library works with [**Swift 3.0**](https://swift.org/blog/swift-3-0-released/)
+- If you look for older languages version support, you can check out the [1.0.0](https://github.com/inaka/FadeButton/releases/tag/1.0.0) release, that contains the old Objective-C version of the library, which is compatible with older Swift versions.
 
 ## Contact Us
 
