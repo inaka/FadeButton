@@ -38,7 +38,7 @@ There's a sample project inside this repo that you can check out in order to hav
 ## Setup
 
 - Via [cocoapods](http://cocoapods.org/), add this line to your `Podfile`:
-  - `pod 'FadeButton' ~> '2.0'`
+  - `pod 'FadeButton', '~> 2.0'`
 - Otherwise, you can just drag and drop the `FadeButton.swift` file into your project, and keep it up to date by yourself.
 
 ## Older Versions Support
