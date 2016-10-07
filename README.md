@@ -1,7 +1,7 @@
 
 FadeButton
 ============
-***Fading effects for buttons in iOS made simple***
+***Fading effects for UIButtons made simple***
 
 [![Build Status](https://api.travis-ci.org/inaka/FadeButton.svg)](https://travis-ci.org/inaka/FadeButton) [![Swift](https://img.shields.io/badge/Swift-3.0-orange.svg?style=flat)](https://swift.org/) [![Cocoapods](https://img.shields.io/cocoapods/v/FadeButton.svg)](https://cocoapods.org/pods/FadeButton) [![Twitter](https://img.shields.io/badge/twitter-@inaka-blue.svg?style=flat)](http://twitter.com/inaka)
 
