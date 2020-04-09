@@ -65,21 +65,21 @@ extension FadeButton {
 
 extension FadeButton {
     
-    open override func setBackgroundImage(_ image: UIImage?, for state: UIControlState) {
+    open override func setBackgroundImage(_ image: UIImage?, for state: UIControl.State) {
         super.setBackgroundImage(image, for: state)
         if state == .highlighted {
             self.configureOverlayBackgroundImage()
         }
     }
     
-    open override func setImage(_ image: UIImage?, for state: UIControlState) {
+    open override func setImage(_ image: UIImage?, for state: UIControl.State) {
         super.setImage(image, for: state)
         if state == .highlighted {
             self.configureOverlayImage()
         }
     }
     
-    open override func setTitle(_ title: String?, for state: UIControlState) {
+    open override func setTitle(_ title: String?, for state: UIControl.State) {
         super.setTitle(title, for: state)
         if state == .highlighted {
             self.configureOverlayLabel()
@@ -138,7 +138,7 @@ extension FadeButton {
     
     fileprivate func fadeOutOverlays() {
         let duration = TimeInterval(exactly: self.fadeDuration)!
-        UIView.animate(withDuration: duration) { animations in
+        UIView.animate(withDuration: duration) { 
             self.overlayBackgroundImage.alpha = 0
             self.overlayImage.alpha = 0
             self.overlayLabel.alpha = 0
